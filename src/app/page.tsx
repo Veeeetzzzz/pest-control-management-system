@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { Navbar } from "@/components/component/navbar";
 import { Login } from "@/components/component/login";
 import { PublicClientApplication } from "@azure/msal-browser";
+import { msalConfig } from "../components/auth/config";
 
 export default function Home() {
   const router = useRouter();

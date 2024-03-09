@@ -33,6 +33,9 @@ export default function Home() {
     }
   }, []);
 
+  export default function DashboardPage() {
+  const isLoggedIn = true; // Replace with your authentication logic
+
   return (
     <div>
       <Navbar isLoggedIn={isLoggedIn} />

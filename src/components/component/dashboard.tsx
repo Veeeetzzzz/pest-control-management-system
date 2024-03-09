@@ -161,7 +161,7 @@ export function ManagerView() {
 }
 
 
-function MountainIcon(props) {
+function MountainIcon(props: SVGProps) {
   return (
     <svg
       {...props}
@@ -177,8 +177,9 @@ function MountainIcon(props) {
     >
       <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
     </svg>
-  )
+  );
 }
+
 
 
 function HomeIcon(props) {
@@ -225,7 +226,7 @@ function CalendarIcon(props) {
 }
 
 
-function UsersIcon(props) {
+function UserIcon(props: SVGProps) {
   return (
     <svg
       {...props}
@@ -244,7 +245,7 @@ function UsersIcon(props) {
       <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
       <path d="M16 3.13a4 4 0 0 1 0 7.75" />
     </svg>
-  )
+  );
 }
 
 
@@ -316,7 +317,7 @@ function SettingsIcon(props) {
 }
 
 
-function BellIcon(props) {
+function BellIcon(props: SVGProps) {
   return (
     <svg
       {...props}
@@ -333,7 +334,7 @@ function BellIcon(props) {
       <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
       <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
     </svg>
-  )
+  );
 }
 
 

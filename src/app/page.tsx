@@ -7,17 +7,17 @@ import { Navbar } from "@/components/component/navbar";
 //export default function Home() {
 //  const { instance } = useMsal();
 
-  const handleLogin = (loginType) => {
-    if (loginType === "popup") {
-      instance.loginPopup(loginRequest).catch(e => {
-        console.error(e);
-      });
-    } else if (loginType === "redirect") {
-      instance.loginRedirect(loginRequest).catch(e => {
-        console.error(e);
-      });
-    }
-  };
+//  const handleLogin = (loginType) => {
+//    if (loginType === "popup") {
+//      instance.loginPopup(loginRequest).catch(e => {
+//        console.error(e);
+//      });
+//    } else if (loginType === "redirect") {
+//      instance.loginRedirect(loginRequest).catch(e => {
+//        console.error(e);
+//      });
+//   }
+//  };
 
   return (
     <>

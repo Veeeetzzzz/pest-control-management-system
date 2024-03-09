@@ -4,7 +4,7 @@ This is work in progress.
 
 ## To do
 
-Implement Azure SSO logic via components/auth/config.js
+Implement Navbar/redirect to Role based view
 
 ## Getting Started
 

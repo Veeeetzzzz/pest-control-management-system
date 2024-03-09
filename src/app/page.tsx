@@ -5,7 +5,9 @@ import { useRouter } from "next/navigation";
 import { Navbar } from "@/components/component/navbar";
 import { Login } from "@/components/component/login";
 import { PublicClientApplication } from "@azure/msal-browser";
-import { msalInstance, loginRequest } from '../components/auth/config';
+import { msalConfig, loginRequest } from '../components/auth/config';
+
+const msalInstance = new PublicClientApplication(msalConfig);
 
 const handleLogin = async () => {
   try {
@@ -15,10 +17,8 @@ const handleLogin = async () => {
   }
 };
 
-
 export default function Home() {
   const router = useRouter();
-  const msalInstance = new PublicClientApplication(msalInstance);
 
   useEffect(() => {
     const accounts = msalInstance.getAllAccounts();
@@ -27,14 +27,6 @@ export default function Home() {
       router.push("/dashboard"); // Replace "/dashboard" with the desired route
     }
   }, []);
-
-  const handleLogin = async () => {
-    try {
-      await msalInstance.loginPopup(loginRequest);
-    } catch (error) {
-      console.error("Login error:", error);
-    }
-  };
 
   return (
     <>

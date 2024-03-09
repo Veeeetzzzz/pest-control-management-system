@@ -6,7 +6,7 @@ import Link from "next/link"
 import { CardTitle, CardHeader, CardContent, Card } from "@/components/ui/card"
 import { TableHead, TableRow, TableHeader, TableCell, TableBody, Table } from "@/components/ui/table"
 
-export function ManagerView() {
+export function Dashboard() {
   return (
     <div className="flex h-screen bg-gray-100 dark:bg-gray-900">
       <aside className="w-64 bg-white dark:bg-gray-800 p-4">

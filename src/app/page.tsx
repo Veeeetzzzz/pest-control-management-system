@@ -6,7 +6,7 @@ import { Navbar } from "@/components/component/navbar";
 import { Login } from "@/components/component/login";
 import { PublicClientApplication } from "@azure/msal-browser";
 import { msalConfig, loginRequest } from '../components/auth/config';
-import { ManagerView } from "@/components/component/dashboard";
+import { Dashboard } from "@/components/component/dashboard";
 
 const msalInstance = new PublicClientApplication(msalConfig);
 

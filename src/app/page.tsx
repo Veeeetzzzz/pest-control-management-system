@@ -5,8 +5,16 @@ import { useRouter } from "next/navigation";
 import { Navbar } from "@/components/component/navbar";
 import { Login } from "@/components/component/login";
 import { PublicClientApplication } from "@azure/msal-browser";
-import { msalConfig } from "../components/auth/config";
-import { loginRequest } from '../components/auth/config';
+import { msalInstance, loginRequest } from '../components/auth/config';
+
+const handleLogin = async () => {
+  try {
+    await msalInstance.loginPopup(loginRequest);
+  } catch (error) {
+    console.error("Login error:", error);
+  }
+};
+
 
 export default function Home() {
   const router = useRouter();

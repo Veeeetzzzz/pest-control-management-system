@@ -34,9 +34,9 @@ export default function Home() {
   }, []);
 
   return (
-    <>
-      <Navbar />
-      <Login onLogin={handleLogin} />
-    </>
+    <div>
+      <Navbar isLoggedIn={isLoggedIn} />
+      {/* Rest of your dashboard content */}
+    </div>
   );
 }

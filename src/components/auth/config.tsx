@@ -15,3 +15,5 @@ export const msalConfig: Configuration = {
 export const loginRequest: PopupRequest = {
   scopes: ["User.Read"],
 };
+
+export const msalInstance = new PublicClientApplication(msalConfig);

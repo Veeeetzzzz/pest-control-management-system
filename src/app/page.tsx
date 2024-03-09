@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Navbar } from "@/components/component/navbar";
 import { Login } from "@/components/component/login";
@@ -11,6 +11,7 @@ const msalInstance = new PublicClientApplication(msalConfig);
 
 export default function Home() {
   const router = useRouter();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const handleLogin = async () => {
     try {
@@ -18,6 +19,7 @@ export default function Home() {
       const accounts = msalInstance.getAllAccounts();
       if (accounts.length > 0) {
         // User is authenticated, redirect to another page
+        setIsLoggedIn(true);
         router.push("/dashboard"); // Replace "/dashboard" with the desired route
       }
     } catch (error) {
@@ -29,17 +31,24 @@ export default function Home() {
     const accounts = msalInstance.getAllAccounts();
     if (accounts.length > 0) {
       // User is authenticated, redirect to another page
+      setIsLoggedIn(true);
       router.push("/dashboard"); // Replace "/dashboard" with the desired route
     }
   }, []);
 
-  export default function DashboardPage() {
-  const isLoggedIn = true; // Replace with your authentication logic
-
   return (
-    <div>
-      <Navbar isLoggedIn={isLoggedIn} />
-      {/* Rest of your dashboard content */}
-    </div>
+    <>
+      {isLoggedIn ? (
+        <div>
+          <Navbar isLoggedIn={isLoggedIn} />
+          {/* Rest of your dashboard content */}
+        </div>
+      ) : (
+        <>
+          <Navbar isLoggedIn={isLoggedIn} />
+          <Login onLogin={handleLogin} />
+        </>
+      )}
+    </>
   );
 }

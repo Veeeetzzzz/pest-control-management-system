@@ -1,7 +1,7 @@
 import { Login } from "@/components/component/login";
 import { Navbar } from "@/components/component/navbar";
-import { useMsal } from "@azure/msal-react";
-import { loginRequest } from './authConfig';
+//import { useMsal } from "@azure/msal-react";
+//import { loginRequest } from './authConfig';
 //import SignInButton from './SignInButton'; //
 
 export default function Home() {

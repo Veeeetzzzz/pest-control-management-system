@@ -43,7 +43,7 @@ export default function Home() {
     <>
       <Navbar isLoggedIn={isLoggedIn} />
       {isLoggedIn ? (
-        <ManagerView /> // Render the ManagerView component when logged in
+        <Dashboard /> // Render the Dashboard when logged in
       ) : (
         <Login onLogin={handleLogin} />
       )}

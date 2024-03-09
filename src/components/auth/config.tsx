@@ -1,4 +1,4 @@
-import { Configuration, PopupRequest } from "@azure/msal-browser";
+import { Configuration, PopupRequest, PublicClientApplication } from "@azure/msal-browser";
 
 export const msalConfig: Configuration = {
   auth: {

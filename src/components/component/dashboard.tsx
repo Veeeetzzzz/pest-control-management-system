@@ -162,7 +162,7 @@ export function Dashboard() {
 }
 
 
-function MountainIcon(props: SVGProps) {
+function MountainIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}

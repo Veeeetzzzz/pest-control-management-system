@@ -6,21 +6,21 @@ import { Navbar } from "@/components/component/navbar";
 import { Login } from "@/components/component/login";
 import { PublicClientApplication } from "@azure/msal-browser";
 import { msalConfig, loginRequest } from '../components/auth/config';
+import { ManagerView } from "@/components/component/dashboard";
 
 const msalInstance = new PublicClientApplication(msalConfig);
 
 export default function Home() {
   const router = useRouter();
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
 
   const handleLogin = async () => {
     try {
       await msalInstance.loginPopup(loginRequest);
       const accounts = msalInstance.getAllAccounts();
       if (accounts.length > 0) {
-        // User is authenticated, redirect to another page
+        // User is authenticated, update the login state
         setIsLoggedIn(true);
-        router.push("/dashboard"); // Replace "/dashboard" with the desired route
       }
     } catch (error) {
       console.error("Login error:", error);
@@ -28,26 +28,24 @@ export default function Home() {
   };
 
   useEffect(() => {
-    const accounts = msalInstance.getAllAccounts();
-    if (accounts.length > 0) {
-      // User is authenticated, redirect to another page
-      setIsLoggedIn(true);
-      router.push("/dashboard"); // Replace "/dashboard" with the desired route
-    }
+    const checkLoginStatus = async () => {
+      const accounts = msalInstance.getAllAccounts();
+      if (accounts.length > 0) {
+        // User is authenticated, update the login state
+        setIsLoggedIn(true);
+      }
+    };
+
+    checkLoginStatus();
   }, []);
 
   return (
     <>
+      <Navbar isLoggedIn={isLoggedIn} />
       {isLoggedIn ? (
-        <div>
-          <Navbar isLoggedIn={isLoggedIn} />
-          {/* Rest of your dashboard content */}
-        </div>
+        <ManagerView /> // Render the ManagerView component when logged in
       ) : (
-        <>
-          <Navbar isLoggedIn={isLoggedIn} />
-          <Login onLogin={handleLogin} />
-        </>
+        <Login onLogin={handleLogin} />
       )}
     </>
   );

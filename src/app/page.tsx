@@ -18,7 +18,7 @@ const handleLogin = async () => {
 
 export default function Home() {
   const router = useRouter();
-  const msalInstance = new PublicClientApplication(msalConfig);
+  const msalInstance = new PublicClientApplication(msalInstance);
 
   useEffect(() => {
     const accounts = msalInstance.getAllAccounts();

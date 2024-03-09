@@ -33,7 +33,7 @@ export function ManagerView() {
             className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition-colors hover:bg-gray-300 dark:hover:bg-gray-600"
             href="#"
           >
-            <UsersIcon className="h-4 w-4" />
+            <UserIcon className="h-4 w-4" />
             Customers
           </Link>
           <Link

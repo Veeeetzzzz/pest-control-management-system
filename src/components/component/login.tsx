@@ -1,26 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { useRouter } from "next/navigation";
-import { PublicClientApplication } from "@azure/msal-browser";
-import { msalConfig, loginRequest } from "@/components/auth/config";
 
-const msalInstance = new PublicClientApplication(msalConfig);
+interface LoginProps {
+  onLogin: () => Promise<void>;
+}
 
-export function Login() {
-  const router = useRouter();
-
-  const handleLogin = async () => {
-    try {
-      await msalInstance.loginPopup(loginRequest);
-      const accounts = msalInstance.getAllAccounts();
-      if (accounts.length > 0) {
-        // User is authenticated, redirect to the dashboard or desired page
-        router.push("/dashboard");
-      }
-    } catch (error) {
-      console.error("Login error:", error);
-    }
-  };
-
+export function Login({ onLogin }: LoginProps) {
   return (
     <div className="flex flex-col min-h-screen bg-gray-50 dark:bg-gray-900">
       <main className="flex flex-col items-center justify-center flex-grow py-12 px-4 sm:px-6 lg:px-8">
@@ -41,7 +25,7 @@ export function Login() {
         <div className="mt-8 w-full max-w-md">
           <Button
             className="w-full h-12 bg-blue-500 text-white font-bold"
-            onClick={handleLogin}
+            onClick={onLogin}
           >
             Sign in with Microsoft
           </Button>

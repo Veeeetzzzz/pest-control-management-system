@@ -4,7 +4,7 @@ This is work in progress.
 
 ## To do
 
-Implement Navbar/redirect to Role based view
+Implement redirect to dashboard
 
 ## Getting Started
 

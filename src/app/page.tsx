@@ -4,8 +4,8 @@ import { Navbar } from "@/components/component/navbar";
 //import { loginRequest } from './authConfig';
 //import SignInButton from './SignInButton'; //
 
-export default function Home() {
-  const { instance } = useMsal();
+//export default function Home() {
+//  const { instance } = useMsal();
 
   const handleLogin = (loginType) => {
     if (loginType === "popup") {

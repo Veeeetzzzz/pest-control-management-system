@@ -183,7 +183,7 @@ function MountainIcon(props: SVGProps<SVGSVGElement>) {
 
 
 
-function HomeIcon(props) {
+function HomeIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -203,8 +203,7 @@ function HomeIcon(props) {
   )
 }
 
-
-function CalendarIcon(props) {
+function CalendarIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -227,7 +226,7 @@ function CalendarIcon(props) {
 }
 
 
-function UserIcon(props: SVGProps) {
+function UserIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -250,7 +249,7 @@ function UserIcon(props: SVGProps) {
 }
 
 
-function GroupIcon(props) {
+function GroupIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -275,7 +274,7 @@ function GroupIcon(props) {
 }
 
 
-function BarChartIcon(props) {
+function BarChartIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -297,7 +296,7 @@ function BarChartIcon(props) {
 }
 
 
-function SettingsIcon(props) {
+function SettingsIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -318,7 +317,7 @@ function SettingsIcon(props) {
 }
 
 
-function BellIcon(props: SVGProps) {
+function BellIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -339,7 +338,8 @@ function BellIcon(props: SVGProps) {
 }
 
 
-function DollarSignIcon(props) {
+
+function DollarSignIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -360,7 +360,7 @@ function DollarSignIcon(props) {
 }
 
 
-function CheckIcon(props) {
+function CheckIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -380,7 +380,7 @@ function CheckIcon(props) {
 }
 
 
-function XIcon(props) {
+function XIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}

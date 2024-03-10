@@ -4,7 +4,8 @@ This is work in progress.
 
 ## To do
 
-Implement redirect to dashboard
+Update Azure AD component with new URL
+Test redirect to dashboard view
 
 ## Getting Started
 

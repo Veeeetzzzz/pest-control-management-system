@@ -9,7 +9,7 @@ Test redirect to dashboard view
 
 ## Getting Started
 
-First, run the local server:
+You can view a demo of this project online: https://pest-control-management-system.vercel.app/ or run a dev server locally
 
 ```bash
 npx next

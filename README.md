@@ -4,8 +4,8 @@ This is work in progress.
 
 ## To do
 
-Update Azure AD component with new URL
-Test redirect to dashboard view
+Azure Entra SSO set up 🟢
+Test redirect to dashboard view 🟠
 
 ## Getting Started
 

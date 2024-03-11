@@ -5,6 +5,7 @@ This is work in progress.
 ## To do
 
 Azure Entra SSO set up 🟢
+
 Test redirect to dashboard view 🟠
 
 ## Getting Started

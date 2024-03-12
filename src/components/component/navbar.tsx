@@ -16,6 +16,9 @@ interface NavbarProps {
   isLoggedIn: boolean;
 }
 
+//Add logout functionality
+//Possible MS Graph API implementation for user profile picture
+
 export function Navbar({ isLoggedIn }: NavbarProps) {
   return (
     <nav className="flex items-center h-14 px-4 border-b gap-4 w-full md:px-6">

@@ -2,15 +2,26 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 This is work in progress.
 
+The main purposes of this repository is to show an implementation of Azure/Entra Single Sign On using Next.js
+
 ## To do
 
-Azure Entra SSO set up 🟢
+- Set up log out logic
+- Update navbar view for logged in users
 
-Test redirect to dashboard view 🟠
+## Demo/screenshots
+
+You can view a demo of this project online: https://pest-control-management-system.vercel.app/
+
+![image](https://github.com/Veeeetzzzz/pest-control-management-system/assets/40268197/eb1bda29-0a8d-47b8-b1b2-9a15cc0fe5a9)
+
+![image](https://github.com/Veeeetzzzz/pest-control-management-system/assets/40268197/287cc630-2371-45a4-a8b4-4f10e8efa3ce)
+
+
 
 ## Getting Started
 
-You can view a demo of this project online: https://pest-control-management-system.vercel.app/ or run a dev server locally
+Run a dev server locally
 
 ```bash
 npx next

@@ -19,7 +19,7 @@ User flow: Land on login page
 
 Authenticate against Entra Directory -> Get scope/role from App Role (Manager/Operative)
 
-![image](https://github.com/Veeeetzzzz/pest-control-management-system/assets/40268197/80cb2840-30b1-47fc-a046-bc46ac8681ac)
+![image](https://github.com/Veeeetzzzz/pest-control-management-system/assets/40268197/2fb000dc-affb-48c8-bb69-584e6e93a254)
 
 Redirect to dashboard. 
 

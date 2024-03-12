@@ -4,6 +4,8 @@ interface LoginProps {
   onLogin: () => Promise<void>;
 }
 
+//Take out Microsoft Logo placeholder, replace with company logo
+
 export function Login({ onLogin }: LoginProps) {
   return (
     <div className="flex flex-col min-h-screen bg-gray-50 dark:bg-gray-900">

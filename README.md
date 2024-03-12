@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 This is work in progress.
 
-The main purposes of this repository is to show an implementation of Azure/Entra Single Sign On using Next.js
+The main purposes of this repository is to show an implementation of Azure/Entra Single Sign On using Next.js for a Single-page application
 
 ## To do
 

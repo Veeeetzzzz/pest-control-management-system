@@ -13,11 +13,18 @@ The main purposes of this repository is to show an implementation of Azure/Entra
 
 You can view a demo of this project online: https://pest-control-management-system.vercel.app/
 
-User flow -> authenticate against Entra Directory -> redirect to dashboard. 
+User flow: Land on login page
 
-![image](https://github.com/Veeeetzzzz/pest-control-management-system/assets/40268197/eb1bda29-0a8d-47b8-b1b2-9a15cc0fe5a9)
+![image](https://github.com/Veeeetzzzz/pest-control-management-system/assets/40268197/eb1bda29-0a8d-47b8-b1b2-9a15cc0fe5a9) 
+
+Authenticate against Entra Directory -> Get scope/role from App Role (Manager/Operative)
+
+![image](https://github.com/Veeeetzzzz/pest-control-management-system/assets/40268197/80cb2840-30b1-47fc-a046-bc46ac8681ac)
+
+Redirect to dashboard. 
 
 ![image](https://github.com/Veeeetzzzz/pest-control-management-system/assets/40268197/287cc630-2371-45a4-a8b4-4f10e8efa3ce)
+
 
 
 

@@ -7,6 +7,9 @@ import { CardTitle, CardHeader, CardContent, Card } from "@/components/ui/card"
 import { TableHead, TableRow, TableHeader, TableCell, TableBody, Table } from "@/components/ui/table"
 import { SVGProps } from 'react';
 
+//Expand Dashboard view to show this weeks bookings
+//Add link to Bookings page - shows all jobs + has filters for queries 
+
 export function Dashboard() {
   return (
     <div className="flex h-screen bg-gray-100 dark:bg-gray-900">

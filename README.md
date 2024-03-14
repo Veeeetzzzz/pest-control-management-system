@@ -1,13 +1,16 @@
+## Intro
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 This is work in progress.
 
-The main purposes of this repository is to show an implementation of Azure/Entra Single Sign On using Next.js for a Single-page application
+The main purposes of this repository is to show an implementation of Azure/Entra Single Sign On using Next.js for a Single-page application but in this example I have locked the authenticated content behind another component to demonstrate the easiest MVP for implementation.
 
-## To do
+This project also makes a few assumptions:
 
-- Set up log out logic
-- Update navbar view for logged in users
+- You do not have an existing data source or line of business system, so you require a stand alone system. Login flow is managed via Azure. MongoDB is used to safely store user bookings, customer details.
+- Azure/Entra is the only acceptable autentication - all users are authenticated against your own Entra directory and only users in your Organsation can sign in with their Microsoft account. Most secure for internal applications.
+- Roles/Scopes are Manager/Operative and have different views, you should have full access to the Azure portal to configure this. Sign up for a [free E5 Sandbox](https://learn.microsoft.com/en-us/office/developer-program/microsoft-365-developer-program-get-started) and sign into [Entra Admin](https://entra.microsoft.com/) with your new Organsational account.
 
 ## Demo/screenshots
 
@@ -25,34 +28,14 @@ Redirect to dashboard.
 
 ![image](https://github.com/Veeeetzzzz/pest-control-management-system/assets/40268197/287cc630-2371-45a4-a8b4-4f10e8efa3ce)
 
+## Requirements & Getting Started
 
+- Microsoft Entra Application - you can see the [full guide here](https://learn.microsoft.com/en-gb/entra/identity-platform/quickstart-single-page-app-react-sign-in)
+- Update the [config.jsx file](https://github.com/Veeeetzzzz/pest-control-management-system/blob/main/src/components/auth/config.tsx) with your organsation's values.
+- Download this repository and run ```npx next``` in the downloaded directory to run a dev server. Open [http://localhost:3000](http://localhost:3000) to see results, you can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- When your ready for production deploy on local/internal tech stack for best practice, publicly hosted infrastructure should be used when Enterprise level SLAs can be agreed.
 
+## To do
 
-## Getting Started
-
-Run a dev server locally
-
-```bash
-npx next
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Set up log out logic
+- Update navbar view for logged in users

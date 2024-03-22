@@ -12,17 +12,50 @@ import {
   DropdownMenu,
 } from '@/components/ui/dropdown-menu';
 import { useMsal } from '@azure/msal-react';
+import { useEffect, useState } from 'react';
+import { Client } from '@microsoft/microsoft-graph-client';
 
 interface NavbarProps {
   isLoggedIn: boolean;
 }
 
 export function Navbar({ isLoggedIn }: NavbarProps) {
-  const { instance } = useMsal();
+  const { instance, accounts } = useMsal();
+  const [profilePicture, setProfilePicture] = useState('');
+
+  useEffect(() => {
+    const fetchProfilePicture = async () => {
+      if (accounts.length === 0) return;
+
+      const accessToken = await instance.acquireTokenSilent({
+        scopes: ['User.Read'],
+        account: accounts[0],
+      });
+
+      const client = Client.init({
+        authProvider: (done) => {
+          done(null, accessToken.accessToken);
+        },
+      });
+
+      try {
+        const response = await client.api('/me/photo/$value').get();
+        const blob = await response.blob();
+        const imageUrl = URL.createObjectURL(blob);
+        setProfilePicture(imageUrl);
+      } catch (error) {
+        console.error('Error fetching profile picture:', error);
+      }
+    };
+
+    if (isLoggedIn) {
+      fetchProfilePicture();
+    }
+  }, [isLoggedIn, accounts, instance]);
 
   const handleLogout = () => {
     instance.logoutRedirect({
-      postLogoutRedirectUri: 'pest-control-management-system.vercel.app', // Replace with your desired logout redirect URL
+      postLogoutRedirectUri: '/', // Replace with your desired logout redirect URL
     });
   };
 
@@ -47,10 +80,10 @@ export function Navbar({ isLoggedIn }: NavbarProps) {
             <DropdownMenuTrigger asChild>
               <Button className="w-8 h-8 rounded-full" size="icon" variant="outline">
                 <img
-                  alt="@shadcn"
+                  alt="User Profile"
                   className="rounded-full"
                   height="32"
-                  src="/placeholder.svg"
+                  src={profilePicture || '/placeholder.svg'}
                   style={{
                     aspectRatio: '32/32',
                     objectFit: 'cover',

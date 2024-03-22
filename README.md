@@ -37,5 +37,4 @@ Redirect to dashboard.
 
 ## To do
 
-- Set up log out logic
-- Update navbar view for logged in users
+- Database integration

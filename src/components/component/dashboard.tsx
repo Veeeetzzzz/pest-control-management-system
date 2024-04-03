@@ -6,9 +6,26 @@ import Link from "next/link"
 import { CardTitle, CardHeader, CardContent, Card } from "@/components/ui/card"
 import { TableHead, TableRow, TableHeader, TableCell, TableBody, Table } from "@/components/ui/table"
 import { SVGProps } from 'react';
+//For later - import { useEffect, useState } from 'react';
 
-//Expand Dashboard view to show this weeks bookings
-//Add link to Bookings page - shows all jobs + has filters for queries 
+//This bit will replace the dummy view with the data from /auth/postgres-stuff.tsx
+//export function Dashboard() {
+//  const [data, setData] = useState([]);
+
+//  useEffect(() => {
+//    const fetchData = async () => {
+//      try {
+//        const response = await fetch('/api/data');
+//        const jsonData = await response.json();
+//        setData(jsonData);
+//      } catch (error) {
+//        console.error('Error fetching data:', error);
+//      }
+//    };
+
+//    fetchData();
+//  }, []);
+
 
 export function Dashboard() {
   return (

@@ -8,9 +8,9 @@ The main purposes of this repository is to show an implementation of Azure/Entra
 
 This project also makes a few assumptions:
 
-- You do not have an existing data source or line of business system, so you require a stand alone system. Login flow is managed via Azure. MongoDB is used to safely store user bookings, customer details.
+- You do not have an existing data source or line of business system, so you require a stand alone system.
 - Azure/Entra is the only acceptable autentication - all users are authenticated against your own Entra directory and only users in your Organsation can sign in with their Microsoft account. Most secure for internal applications.
-- Roles/Scopes are Manager/Operative and have different views, you should have full access to the Azure portal to configure this. Sign up for a [free E5 Sandbox](https://learn.microsoft.com/en-us/office/developer-program/microsoft-365-developer-program-get-started) and sign into [Entra Admin](https://entra.microsoft.com/) with your new Organsational account.
+- Roles/Scopes are Manager/Operative and have different views, you should have full access to the Azure portal to configure this. 
 
 ## Demo/screenshots
 
@@ -31,8 +31,9 @@ Redirect to dashboard.
 ## Requirements & Getting Started
 
 - Microsoft Entra Application - you can see the [full guide here](https://learn.microsoft.com/en-gb/entra/identity-platform/quickstart-single-page-app-react-sign-in)
+- Sign up for a [free E5 Sandbox](https://learn.microsoft.com/en-us/office/developer-program/microsoft-365-developer-program-get-started) and sign into [Entra Admin](https://entra.microsoft.com/) with your new Organsational account.
 - Update the [config.jsx file](https://github.com/Veeeetzzzz/pest-control-management-system/blob/main/src/components/auth/config.tsx) with your organsation's values.
-- Postgres (also avaliable on Vercel)
+- Set up Postgres DB (also avaliable on Vercel) - you will need to create a schema & then update [postgres-stuff file](https://github.com/Veeeetzzzz/pest-control-management-system/blob/main/src/components/auth/postgres-stuff.tsx)
 - Download this repository and run ```npx next``` in the downloaded directory to run a dev server. Open [http://localhost:3000](http://localhost:3000) to see results, you can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 - When your ready for production deploy on local/internal tech stack for best practice, publicly hosted infrastructure should be used when Enterprise level SLAs can be agreed.
 

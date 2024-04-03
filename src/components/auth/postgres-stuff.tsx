@@ -1,4 +1,5 @@
 //This component calls your Postgres database to populate the dashboard view
+//Change the SELECT query for your schema
 
 import { Pool } from 'pg';
 

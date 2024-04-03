@@ -32,9 +32,10 @@ Redirect to dashboard.
 
 - Microsoft Entra Application - you can see the [full guide here](https://learn.microsoft.com/en-gb/entra/identity-platform/quickstart-single-page-app-react-sign-in)
 - Update the [config.jsx file](https://github.com/Veeeetzzzz/pest-control-management-system/blob/main/src/components/auth/config.tsx) with your organsation's values.
+- Postgres (also avaliable on Vercel)
 - Download this repository and run ```npx next``` in the downloaded directory to run a dev server. Open [http://localhost:3000](http://localhost:3000) to see results, you can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 - When your ready for production deploy on local/internal tech stack for best practice, publicly hosted infrastructure should be used when Enterprise level SLAs can be agreed.
 
 ## To do
 
-- Database integration
+- Set up data views for dashboard

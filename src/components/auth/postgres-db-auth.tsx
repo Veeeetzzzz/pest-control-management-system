@@ -1,5 +1,7 @@
 //This component will handle the inital DB connection for the application
 //It must be imported into each component
+import { Pool } from 'pg';
+
 const pool = new Pool({
   // Configure your PostgreSQL connection details
   host: 'your-host',

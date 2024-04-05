@@ -1,3 +1,10 @@
 //This component will handle the inital DB connection for the application
 //It must be imported into each component
-//It's currently only calling the DB once per componment load - i.e. dashboard has one query to display the data
+const pool = new Pool({
+  // Configure your PostgreSQL connection details
+  host: 'your-host',
+  port: 5432,
+  database: 'your-database',
+  user: 'your-username',
+  password: 'your-password',
+});

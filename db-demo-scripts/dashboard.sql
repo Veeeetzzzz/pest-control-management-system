@@ -1,0 +1,1 @@
+--Placeholder for SQL script that will generate dummy data in your PostgreSQL database to show the dashboard view

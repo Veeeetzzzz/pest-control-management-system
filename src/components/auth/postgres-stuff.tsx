@@ -5,16 +5,16 @@ import { Pool } from 'pg';
 
 const pool = new Pool({
   // Configure your PostgreSQL connection details
-  host: 'your-host',
-  port: 5432,
-  database: 'your-database',
-  user: 'your-username',
-  password: 'your-password',
+  host: 'your-host',         // 'localhost' if connecting locally
+  port: 5432,                // Default PostgreSQL port
+  database: 'PestControlManagement',
+  user: 'your-username',     // Replace with your username
+  password: 'your-password', // Replace with your password
 });
 
 export default async function handler(req, res) {
   try {
-    const result = await pool.query('SELECT * FROM your_table');
+    const result = await pool.query('SELECT * FROM Invoice');
     res.status(200).json(result.rows);
   } catch (error) {
     console.error('Error fetching data from PostgreSQL:', error);

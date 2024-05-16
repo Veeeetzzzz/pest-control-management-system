@@ -1,6 +1,7 @@
 //This component calls your Postgres database to populate the dashboard view
 //Change the SELECT query for your schema
 
+import { NextApiRequest, NextApiResponse } from 'next';
 import { Pool } from 'pg';
 
 const pool = new Pool({
@@ -12,7 +13,7 @@ const pool = new Pool({
   password: 'your-password', // Replace with your password
 });
 
-export default async function handler(req, res) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const result = await pool.query('SELECT * FROM Invoice');
     res.status(200).json(result.rows);

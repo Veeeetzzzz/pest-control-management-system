@@ -4,6 +4,8 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { Pool } from 'pg';
 
+
+//Use .env in production - this is just for testing
 const pool = new Pool({
   // Configure your PostgreSQL connection details
   host: 'your-host',         // 'localhost' if connecting locally

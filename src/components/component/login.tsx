@@ -4,23 +4,11 @@ interface LoginProps {
   onLogin: () => Promise<void>;
 }
 
-//Take out Microsoft Logo placeholder, replace with company logo
 
 export function Login({ onLogin }: LoginProps) {
   return (
     <div className="flex flex-col min-h-screen bg-gray-50 dark:bg-gray-900">
       <main className="flex flex-col items-center justify-center flex-grow py-12 px-4 sm:px-6 lg:px-8">
-        <img
-          alt="Microsoft Logo"
-          className="h-18 w-18"
-          height="72"
-          src="/placeholder.svg"
-          style={{
-            aspectRatio: "72/72",
-            objectFit: "cover",
-          }}
-          width="72"
-        />
         <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900 dark:text-gray-100">
           Pest Control Management System
         </h2>

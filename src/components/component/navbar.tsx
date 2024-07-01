@@ -55,7 +55,7 @@ export function Navbar({ isLoggedIn }: NavbarProps) {
 
   const handleLogout = () => {
     instance.logoutRedirect({
-      postLogoutRedirectUri: '/', // Replace with your desired logout redirect URL
+      postLogoutRedirectUri: 'https://pest-control-management-system.vercel.app', // Replace with your desired logout redirect URL
     });
   };
 

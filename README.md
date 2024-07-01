@@ -2,15 +2,15 @@
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-This project should not be used in production settings.
+This project should not be used in production settings. 
 
-The main purposes of this repository is to show an implementation of Azure/Entra Single Sign On using Next.js for a Single-page application but in this example I have locked the authenticated content behind another component to demonstrate the easiest MVP for implementation.
+The main purposes of this repository is to show an implementation of Azure/Entra Single Sign On using Next.js for a Single-page application but in this example I have locked the authenticated content behind another component to demonstrate the easiest MVP for implementation. It is a basic MVP to demonstrate one type of implementation for Azure/Entra Single Sign On with Next.js applications.
 
 This project also makes a few assumptions:
 
 - You do not have an existing data source or line of business system, so you require a stand alone system.
 - Microsoft Entra is the only acceptable autentication - all users are authenticated against your own Entra directory.
-- Roles/Scopes are Manager/Operative and have different views, you should have full access to the Azure portal to configure this. 
+- Roles/Scopes are Manager/Operative and have different views, you should have full access to the Azure portal to configure this.
 
 ## Demo/screenshots
 

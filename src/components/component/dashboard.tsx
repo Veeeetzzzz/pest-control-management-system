@@ -8,14 +8,14 @@ import { TableHead, TableRow, TableHeader, TableCell, TableBody, Table } from "@
 import { SVGProps } from 'react';
 //For later - import { useEffect, useState } from 'react';
 
-//This bit will replace the dummy view with the data from /auth/postgres-stuff.tsx
+//This bit will replace the current dashboard and use the data from the connected db to populate.
 //export function Dashboard() {
 //  const [data, setData] = useState([]);
 
 //  useEffect(() => {
 //    const fetchData = async () => {
 //      try {
-//        const response = await fetch('/api/data');
+//        const response = await fetch('/api/data'); //update path
 //        const jsonData = await response.json();
 //        setData(jsonData);
 //      } catch (error) {

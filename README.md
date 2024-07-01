@@ -12,6 +12,11 @@ This project also makes a few assumptions:
 - Microsoft Entra is the only acceptable autentication - all users are authenticated against your own Entra directory.
 - Roles/Scopes are Manager/Operative and have different views, you should have full access to the Azure portal to configure this.
 
+## To do list
+
+- Fix/test profile picture import for navbar
+- Move database calls to API calls via PostgREST/postgrest (experimental)
+
 ## Demo/screenshots
 
 You can view a demo of this implementation via https://pest-control-management-system.vercel.app but note you will not be able to login as it authenticates against my own Azure resources - download this project, update the config.jsx file with your values and you can test this locally.

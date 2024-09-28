@@ -1,3 +1,11 @@
+## Update 28/09/2024.
+
+This repo has served it's purpose and will be archived with no plans to contribute further.
+
+If you are interested in the continuation of this project, efforts are now focused on rebuilding a complete open source solution with full intergration into Enterprise ecosystems.
+
+You can visit the [Pest Control Standalone Reporting Form repository](https://github.com/Veeeetzzzz/pest-control-standalone-reporting-form/tree/main) to stay up to date on this endavour. 
+
 ## Intro
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
